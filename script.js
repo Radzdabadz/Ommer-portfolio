@@ -36,7 +36,7 @@ updateProgress();
 const welcome=document.getElementById('welcome-dialog');
 const openingVariants=[...document.querySelectorAll('[data-opening]')];
 const requestedOpening=new URLSearchParams(location.search).get('opening');
-const openingStyle=['keycap','terminal','boot'].includes(requestedOpening)?requestedOpening:'keycap';
+const openingStyle=['keycap','terminal','boot'].includes(requestedOpening)?requestedOpening:'terminal';
 let entering=false;
 let entryTimer;
 function finishOpening(){
