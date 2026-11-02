@@ -41,3 +41,7 @@
 .welcome-stage[hidden]{display:none}
 
 #hero-title:focus{outline:none}
+
+/* Keep the expanded biography and career direction readable in the existing layout. */
+.intro-body>p{max-width:min(570px,calc(100% - 85px))}.intro-body>p+p{margin-top:16px}.principles p{font:400 12px/1.85 var(--sans);color:var(--muted);max-width:250px;margin-top:18px}
+@media(max-width:650px){.intro-body>p{max-width:none}.intro-star{display:none}.principles p{font-size:10px;line-height:1.8;margin-top:14px}}
