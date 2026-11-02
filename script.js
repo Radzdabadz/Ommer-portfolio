@@ -1,8 +1,23 @@
-/* A small support exercise, opened only when a visitor chooses to explore it. */
+/* A small game-connection exercise, opened only when a visitor chooses to explore it. */
 const demo = {
-  scope: {heading:'One device, or all devices?',copy:'Ask whether other devices can connect before deciding what to check.',button:'Only this laptop',response:'Next: check that Wi-Fi is on, airplane mode is off and the intended network is selected.'},
-  check: {heading:'Start with the basics.',copy:'Confirm the connection settings and note any error message. Observe before making changes.',button:'Still offline',response:'Record the symptoms and completed checks. If the issue continues, pass those details on for further investigation.'},
-  explain: {heading:'Keep the person informed.',copy:'Summarise what is known and give a clear next step. Avoid promising a fix before the cause is understood.',button:'Show an update',response:'“The issue appears limited to this laptop. I’ve checked the connection settings and will pass the details on for further investigation.”'}
+  "scope": {
+    "heading": "One game, or every app?",
+    "copy": "Check whether the issue affects only the game, other apps or other devices before choosing a test.",
+    "button": "Only this game",
+    "response": "Next: check the game’s service status and note the exact error message. Compare another app or game if available."
+  },
+  "check": {
+    "heading": "Test one thing at a time.",
+    "copy": "Check service status, record the error and compare the connection with another app before changing settings.",
+    "button": "Still disconnecting",
+    "response": "Document the symptoms and completed checks so the issue can be reproduced or passed on for further investigation."
+  },
+  "explain": {
+    "heading": "Explain what you found.",
+    "copy": "Summarise the pattern and the next step in plain language, without promising a fix before the cause is known.",
+    "button": "Show an update",
+    "response": "“Other apps are staying connected, so I’m checking whether the issue is specific to this game. I’ll record the error and test one change at a time.”"
+  }
 };
 const dialog = document.getElementById('support-dialog');
 const tabs = [...document.querySelectorAll('[role="tab"]')];
