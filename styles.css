@@ -110,7 +110,7 @@
   grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(20px, 3.5vw, 52px);
-  padding: clamp(12px, 4dvh, 42px) 8%;
+  padding: clamp(12px, 3.5dvh, 42px) 8%;
 }
 .about-story {
   display: grid;
@@ -296,7 +296,7 @@
 }
 
 /* Keep the full biography readable on compact screens. */
-@media (max-width: 360px) and (orientation: portrait), (max-height: 420px) and (orientation: landscape) {
+@media (max-width: 650px) and (max-height: 700px) and (orientation: portrait), (max-height: 420px) and (orientation: landscape) {
   .about-screen { gap: 9px; padding-block: 4px; }
   .about-story { grid-template-columns: minmax(0, 1fr) 64px; row-gap: 5px; }
   .about-story h1 { font-size: 25px; margin-top: 4px; }
@@ -322,4 +322,24 @@
   .about-story h1 { margin-top: 0; }
   .about-story { row-gap: 3px; }
   .about-copy p { line-height: 1.24; }
+}
+
+@media (max-width: 360px) and (orientation: portrait), (max-height: 350px) and (orientation: landscape) {
+  .about-screen { padding-inline: 5%; }
+  .about-heading .eyebrow { display: none; }
+  .about-story h1 { margin-top: 0; }
+  .about-copy p { font-size: 12px; line-height: 1.25; }
+}
+
+@media (max-height: 420px) and (orientation: landscape) {
+  .about-screen { padding-block: 2px; }
+}
+
+@media (max-height: 350px) and (orientation: landscape) {
+  .about-screen { grid-template-columns: minmax(0, 1.58fr) minmax(0, 1fr); }
+  .about-page .site-header { height: 40px; }
+  .about-page .screen-footer { min-height: 29px; }
+  .about-story { grid-template-columns: minmax(0, 1fr) 52px; }
+  .about-copy .about-availability { font-size: 12px; }
+  .skills-panel { padding-inline: 10px; }
 }
