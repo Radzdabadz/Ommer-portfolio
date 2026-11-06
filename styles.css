@@ -309,3 +309,23 @@
 @media (max-width: 360px) and (orientation: portrait) {
   .about-screen { gap: 12px; padding-block: 8px; }
 }
+
+/* Keep the full biography readable on compact screens. */
+@media (max-width: 360px) and (orientation: portrait), (max-height: 420px) and (orientation: landscape) {
+  .about-screen { gap: 9px; padding-block: 4px; }
+  .about-story { grid-template-columns: minmax(0, 1fr) 64px; row-gap: 5px; }
+  .about-story h1 { font-size: 25px; margin-top: 4px; }
+  .about-copy p { font-size: 13px; line-height: 1.3; }
+  .about-copy p + p { margin-top: 5px; }
+  .skills-panel { padding-block: 7px; }
+  .skills-panel h2 { font-size: 26px; }
+  .skills-panel .skills-kicker { display: none; }
+  .skills-panel dl { margin-top: 5px; }
+  .skills-panel dl div { padding-block: 3px; }
+  .skills-panel dt { font-size: 13px; }
+  .skills-panel dd { margin-top: 1px; line-height: 1.2; }
+}
+
+@media (max-height: 420px) and (orientation: landscape) {
+  .about-screen { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); }
+}
